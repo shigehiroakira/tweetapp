@@ -54,3 +54,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "pry-rails"
 gem "devise"
+gem "omniauth-twitter"
+gem "omniauth-facebook"
+gem "omniauth-google-oauth2"
+gem "omniauth-rails_csrf_protection"
