@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+ <p>ログイン中</p>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<% else %>
+ <p>ログインしていません</p>
+  <%= link_to "新規登録" ,new_user_path%>
+<% end %>
