@@ -1,0 +1,8 @@
+
+  
+<% @tweets.each do |tweet| %>
+<p> <%= tweet.image %> </p>
+    <%= tweet.text %>
+    <p><%= link_to "削除", tweet_path(tweet.id),method: :delete%></p>
+<% end %>
+
