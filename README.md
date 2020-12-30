@@ -14,6 +14,18 @@
 
 - has_many :tweets
 - has_many :comment
+- has_many :sns_credential
+
+## sns_credentialモデル
+
+| Column         | Type      |  Option           |
+|----------------|-----------|-------------------|
+| provider       | string    |                   |
+| uid            | string    |                   | 
+| user           | references| foreign_key: true |
+
+## Association
+- belongs_to :user
 
 
 ## tweet テーブル
