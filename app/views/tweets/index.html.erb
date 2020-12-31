@@ -1,8 +1,30 @@
-
-  
-<% @tweets.each do |tweet| %>
-<p> <%= tweet.image %> </p>
-    <%= tweet.text %>
-    <p><%= link_to "削除", tweet_path(tweet.id),method: :delete%></p>
-<% end %>
-
+<div class="contents row">
+  <% @tweets.each do |tweet| %>
+    <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+      <div class="more">
+        
+        <ul class="more_list">
+        <% if user_signed_in? %>
+          <li>
+           <%= link_to "詳細",tweet_path(tweet.id),method: :get%>
+          </li>
+          <li>
+            <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
+          </li>
+          <li>
+            <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
+          </li>
+        </ul>
+        <% else %>
+            <%= link_to "ログアウト"%>
+        <% end %>
+      </div>
+      <p><%= tweet.text %></p>
+    
+  <strong>Image:</strong>
+  <div class= "imagetag">
+  <%= image_tag tweet.image.url %>
+  </div>
+    </div>
+  <% end %>
+</div>
