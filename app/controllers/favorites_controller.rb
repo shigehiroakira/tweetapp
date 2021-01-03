@@ -9,6 +9,5 @@ class FavoritesController < ApplicationController
     @favorite = current_user.favorites.find_by(tweet_id: @tweet.id)
     @favorite.destroy
     redirect_back(fallback_location: root_path)
-
   end
 end

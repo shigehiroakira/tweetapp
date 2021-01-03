@@ -1,5 +1,4 @@
 class TweetsController < ApplicationController
-  
   def index
     @tweets = Tweet.includes(:user)
   end
@@ -19,13 +18,11 @@ class TweetsController < ApplicationController
 
   def destroy
     tweet = Tweet.find(params[:id])
-    if tweet.destroy
-      redirect_to root_path
-    end
+    redirect_to root_path if tweet.destroy
   end
 
   def edit
- @tweet = Tweet.find(params[:id])
+    @tweet = Tweet.find(params[:id])
   end
 
   def update
@@ -41,12 +38,9 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
   end
 
-
   private
 
   def tweet_params
-    
-    params.require(:tweet).permit(:text,:image).merge(user_id: current_user.id)
-  
+    params.require(:tweet).permit(:text, :image).merge(user_id: current_user.id)
   end
 end
