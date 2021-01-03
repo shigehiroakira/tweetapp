@@ -171,7 +171,15 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+.iine {
+  background-color:white;
+  color:red;
+}
 
+.note_iine {
+  background-color:white;
+  color:black;
+}
 sup {
   top: -0.5em;
 }

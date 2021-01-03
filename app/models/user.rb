@@ -24,10 +24,12 @@ class User < ApplicationRecord
           validates :password
         end
 
-        
-
   has_many :sns_credential
   has_many :tweets
+  has_many :favorites, dependent: :destroy
+
+ 
+
 
   def self.from_omniauth(auth)
    sns = SnsCredential.where(provider: auth.provider,uid: auth.uid).first_or_create
@@ -38,4 +40,8 @@ class User < ApplicationRecord
    end
    return user
   end
+  
+  def already_favorited?(tweet)
+    self.favorites.exists?(tweet_id:tweet.id)
+   end
 end
