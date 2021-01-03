@@ -7,6 +7,7 @@ class User < ApplicationRecord
          with_options presence: true do
           validates :nickname
           validates :birthday
+          validates :email, uniqueness: true
         end
       
         with_options presence: true, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: '全角ひらがな・カタカナ・漢字で入力してください' } do
@@ -23,8 +24,10 @@ class User < ApplicationRecord
           validates :password
         end
 
+        
 
   has_many :sns_credential
+  has_many :tweets
 
   def self.from_omniauth(auth)
    sns = SnsCredential.where(provider: auth.provider,uid: auth.uid).first_or_create
