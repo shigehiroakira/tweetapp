@@ -1,8 +1,7 @@
 class TweetsController < ApplicationController
-  before_action :authenticate_user!
-
+  
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.includes(:user)
   end
 
   def new
@@ -39,7 +38,7 @@ class TweetsController < ApplicationController
   end
 
   def show
-    
+    @tweet = Tweet.find(params[:id])
   end
 
 

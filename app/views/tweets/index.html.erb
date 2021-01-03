@@ -4,7 +4,7 @@
       <div class="more">
         
         <ul class="more_list">
-        <% if user_signed_in? %>
+        
           <li>
            <%= link_to "詳細",tweet_path(tweet.id),method: :get%>
           </li>
@@ -15,12 +15,13 @@
             <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
           </li>
         </ul>
-        <% else %>
-            <%= link_to "ログアウト"%>
-        <% end %>
       </div>
       <p><%= tweet.text %></p>
-    
+    <span class="name">
+        <a href="/users/<%= tweet.user.id%>">
+          <span>投稿者</span><%= tweet.user.nickname %>
+        </a>
+      </span>
   <strong>Image:</strong>
   <div class= "imagetag">
   <%= image_tag tweet.image.url %>
