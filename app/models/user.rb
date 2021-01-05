@@ -26,6 +26,7 @@ class User < ApplicationRecord
 
   has_many :sns_credential
   has_many :tweets
+  has_many :comments
   has_many :favorites, dependent: :destroy
 
   def self.from_omniauth(auth)
