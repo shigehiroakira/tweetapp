@@ -15,6 +15,7 @@
 - has_many :tweets
 - has_many :comment
 - has_many :sns_credential
+- has_many :favorites
 
 ## sns_credentialモデル
 
@@ -39,6 +40,7 @@
 ### Association
 - has_many   :comments
 - belongs_to :user
+- has_many :favorites
 
 
 ## comment テーブル
@@ -54,3 +56,12 @@
 - belongs_to :user
 - belongs_to :tweet
 
+### Favorite テーブル
+| Column      | Type       | Option                         |
+| user        | references | null: false, foreign_key: true |
+| tweet       | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :tweet
