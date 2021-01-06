@@ -36,7 +36,38 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
+.title{
+  width: 50%;
+  margin-left: 30px;
+  background-color:;
+  font-size: 20px;
+  margin-top:50px ;
+}
+ul,li {
+  padding: 0;
+  margin: 0;
+}
 
+
+
+.lists {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+li {
+  list-style: none;
+}
+.swiper-wrapper{
+  
+}
+
+.swiper-slide{
+  width: 100%;
+  height: auto;
+  
+}
 /*
  * Address `[hidden]` styling not present in IE 8/9.
  * Hide the `template` element in IE, Safari, and Firefox < 22. */
@@ -478,6 +509,7 @@ ul li {
   margin-bottom: 0;
   max-width: 660px;
   *zoom: 1;
+  
 }
 
 .row .grid-1,
@@ -519,6 +551,7 @@ ul li {
 
 .row .grid-6 {
   width: 48.2%;
+  
 }
 
 .row .grid-7 {
@@ -785,7 +818,20 @@ header.header .user_nav {
   height: 100px;
   right: 0;
 }
+.footer_bar{
+  min-height: 100vh;
+    position: relative;
+}
+footer{
+  width: 100%;
+  background-color: #89c7de;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
 
+  position: absolute;
+  bottom: 0; 
+}
 header.header .user_nav span {
   top: 5px;
   display: block;
@@ -802,10 +848,11 @@ header.header .user_nav span:after {
   content: '▼';
   font-size: .7em;
   margin-left: -4px;
+  color:black;
 }
 
 header.header .user_nav span:hover ul {
-  color: #57C3E9;
+  color:black;
   display: block;
 }
 
@@ -848,6 +895,7 @@ header.header .user_nav ul li a {
   bottom: 10px;
   left: 0;
   right: 0;
+  
 }
 
 div.contents.row h2 {
