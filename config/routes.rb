@@ -3,10 +3,10 @@ Rails.application.routes.draw do
     omniauth_callbacks: "users/omniauth_callbacks",
     registrations: "users/registrations"
   }
- root "tweets#index"
+ root "comments#index"
  resources :users 
  resources :tweets do
    resource :favorites, only: [:create, :destroy]
-   resources :comments, only: :create
+   resources :comments, only: [:create,:index]
  end
 end
