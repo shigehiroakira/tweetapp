@@ -7,7 +7,7 @@
   <%= f.text_area :text, rows: "15" %>
 
   <%= f.label :image, "画像を貼り付けよう"%>
-  <%= f.text_field :image, placeholder: "画像のURL"%>
+  <%= f.file_field :image, placeholder: "画像のURL"%>
 
   <%= f.submit "送信"%>
 <% end %>
