@@ -39,7 +39,7 @@ audio:not([controls]) {
 .title{
   width: 50%;
   margin-left: 30px;
-  background-color:;
+  
   font-size: 20px;
   margin-top:50px ;
 }
