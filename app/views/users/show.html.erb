@@ -1,10 +1,11 @@
 <div class="contents row">
-
   <p><%= @nickname %>さんの投稿一覧</p>
-  <%= link_to "投稿一覧に戻る",tweets_path,method: :get%>
-
   <% @tweets.each do |tweet| %>
-      <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
+    <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+      <p><%= tweet.text %></p>
+      <%= image_tag tweet.image.url %>
+       </div>
+       
   <% end %>
   
 </div>
