@@ -1,5 +1,7 @@
 <div class="contents row">
   <div class="container">
+  <h1><%= link_to "投稿一覧へ戻る",tweets_path,method: :get%></h1>
+    
     <h3>投稿する</h3>
 
 <%= form_with model: @tweet, local: true do |f| %>
