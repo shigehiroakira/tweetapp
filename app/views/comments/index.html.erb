@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
- <head>
+  <head>
   <meta charset="utf-8">
-   <title>練習</title>
-  <link rel="stylesheet" href="style.css">
+    <title>slick</title>
+   
+    <link rel="stylesheet" href="slick.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"  href="slick-theme.css">
+    
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
 <body>
 <div class="navbar">
@@ -15,7 +20,21 @@
         </ul>     
 </div>
 <div class= "title">気軽に日常をの出来事を呟いてみよう</div>
-<%=image_tag "旅行２.jpg", size:"20000x30" %>
 
+<ul class="slider">
+    <li><%=image_tag "旅行２.jpg",size:"20000x30" %></li>
+    <li><%=image_tag "旅行１.jpeg",size:"20000x30" %></li>
+    <li><%=image_tag "旅行３.jpg" ,size:"20000x30"%></li>
+    <li><%=image_tag "景色１.jpg" ,size:"20000x30"%></li>
+    <li><%=image_tag "モルディブ.jpg" ,size:"20000x30"%></li>
+</ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="javascript/test.js"></script>
+
+<script type="text/javascript" src="javascript/slick.js"></script>
+
+
+
+		
 </body>
 </html>
