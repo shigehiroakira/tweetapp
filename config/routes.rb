@@ -6,6 +6,9 @@ Rails.application.routes.draw do
  root "comments#index"
  resources :users 
  resources :tweets do
+  collection do
+    get 'search'
+  end
    resource :favorites, only: [:create, :destroy]
    resources :comments, only: [:create,:index]
  end
