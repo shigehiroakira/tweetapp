@@ -1,14 +1,7 @@
 <div class="content_post" style="background-image: url(<%= tweet.image %>);">
       <div class="more">
 
-      <% if user_signed_in? && current_user.id != tweet.user_id %>
-       <% if current_user.already_favorited?(tweet)%>
-       <%= link_to "いいねを外す", tweet_favorites_path(tweet),method: :delete,class: "note_iine" %>
-       <% else %>
-       <%= link_to "いいね", tweet_favorites_path(tweet),method: :post,class: "iine" %>
-       <% end %>
-       <%= tweet.favorites.count %>
-      <% end %>
+      
 
         <ul class="more_list">
         <% if user_signed_in? && current_user.id == tweet.user_id %>

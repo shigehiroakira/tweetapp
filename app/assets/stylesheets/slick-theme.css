@@ -79,7 +79,7 @@
 
 .slick-prev
 {
-    left: 40px;
+    left: 80px;
     z-index: 100;
 }
 [dir='rtl'] .slick-prev
@@ -89,16 +89,16 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: '<';
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: '>';
 }
 
 .slick-next
 {
-    right: 60px;
+    right: 80px;
     z-index: 100;
 }
 [dir='rtl'] .slick-next
@@ -108,11 +108,11 @@
 }
 .slick-next:before
 {
-    content: '→';
+    content: '>';
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: '<';
 }
 
 /* Dots */
@@ -147,7 +147,7 @@
     margin: 0 5px;
     padding: 0;
 
-    cursor: pointer;
+    cursor:pointer
 }
 .slick-dots li button
 {
@@ -190,7 +190,7 @@
     width: 20px;
     height: 20px;
 
-    content: '•';
+    content: '●';
     text-align: center;
 
     opacity: .25;
