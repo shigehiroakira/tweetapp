@@ -5,6 +5,12 @@ $(document).ready(function(){
    arrow: true,
    dots: true,
    centerMode: true,
-   centerPadding: "100px"
+   centerPadding: "80px"
   });
+
+  $(".nav").slick({
+    asNavFor: ".slider",
+    slidesToShow: 4,
+    focusOnSelect: true,
+  })
 });

@@ -20,6 +20,11 @@ section,
 summary {
   display: block;
 }
+.slider{
+margin:20px;
+
+}
+
 
 /*
  * Correct `inline-block` display not defined in IE 8/9. */
