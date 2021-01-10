@@ -6,4 +6,12 @@
   <% @tweets.each do |tweet| %>
     <%= render partial: "tweet", locals: { tweet: tweet } %>
   <% end %>
+
+  <% @tweets.each do |post| %>
+ <div class="panel panel-success">
+   <div class="panel-body">
+   
+ </div>
+<% end %>
+<%= paginate @tweets %>
 </div>
