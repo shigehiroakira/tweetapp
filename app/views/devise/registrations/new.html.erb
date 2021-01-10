@@ -1,58 +1,61 @@
-<h2>Sign up</h2>
+<div class= "new">
+新規登録画面
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 <div class= "field">
-    <%= f.label :nickname %><br />
-    <%= f.text_field :nickname %>
+    <%= f.label :nickname,"ニックネームを入力してください" %><br />
+    <%= f.text_field :nickname,autofocus: true %>
   </div>
 
   <div class= "field">
-    <%= f.label :last_name %><br />
+    <%= f.label :last_name,"苗字を入力してください" %><br />
     <%= f.text_field :last_name %>
   </div>
 
   <div class= "field">
-    <%= f.label :first_name %><br />
+    <%= f.label :first_name,"名前を入力してください" %><br />
     <%= f.text_field :first_name %>
   </div>
 
   <div class= "field">
-    <%= f.label :last_name_kana %><br />
+    <%= f.label :last_name_kana,"苗字をカタカナで入力してください" %><br />
     <%= f.text_field :last_name_kana %>
   </div>
 
   <div class= "field">
-    <%= f.label :first_name_kana %><br />
+    <%= f.label :first_name_kana,"名前をカタカナで入力してください"%><br />
     <%= f.text_field :first_name_kana %>
   </div>
 
-  <div class= "field">
-    <%= f.label :birthday, "生年月日" %><br />
-    <%= f.date_select :birthday, start_year: 1950, end_year: 2019 %>
-  </div>
-
+ <div class= "field">
+    <%= f.label :birthday,"生年月日を入力してください"%><br />
+    <%== sprintf(
+ f.date_select(:birthday, :use_month_numbers=>true, :date_separator => '%s', :start_year=>1930, :end_year => Time.now.year, :default =>'1990-1-1'.to_date), '年','月') + '日生まれ' %>
+</div>
+ 
  
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email,"メールアドレスを入力してください" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, "パスワードを入力してください"%>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> 文字以上で入力）</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation,"確認の為もう一度入力してください" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "送信" %>
   </div>
 <% end %>
 

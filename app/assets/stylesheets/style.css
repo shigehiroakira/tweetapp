@@ -26,6 +26,32 @@ margin-bottom: 20px;
 
 }
 
+.pagination{
+  margin: auto;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+}
+.pagination span{
+  background-color: rgba(158, 158, 158, 0.4);
+  text-align: center;
+  width: 70px;
+  border: solid 2px blue;
+  color:red;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.pagination span:hover{
+  transition: .3s;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.pagination span a:hover{
+  transition: .3s;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
 /*
  * Correct `inline-block` display not defined in IE 8/9. */
@@ -259,7 +285,30 @@ fieldset {
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
+.submit{
+ width: 100%;
+margin-left: 140px;
+}
+.field{
+  width: 40%;
+  margin: 50px;
+  font-size: 20px;
+  
+}
+.login_new{
+  font-size: 30px;
+}
+.new{
+  font-size:50px;
+  display: flex;
+  margin: 100px;
+  color: greenyellow;
+}
 
+.actions{
+  margin: 50px;
+  width: 50%;
+}
 /*
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets. */
@@ -754,8 +803,8 @@ form input[type="submit"] {
 header.header div.header__bar.row div.grid-6 a.post {
   padding: 8px 20px;
   font-size: 14px;
-  border: 2px solid #57C3E9;
-  color: #57C3E9;
+  border: 4px solid green;
+  color: green;
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
@@ -764,8 +813,8 @@ header.header div.header__bar.row div.grid-6 a.post {
 
 .btn:hover,
 header.header div.header__bar.row div.grid-6 a.post:hover {
-  border-color: #9bdbf2;
-  color: #9bdbf2;
+  border-color: greenyellow;
+  color: greenyellow;
 }
 
 .title {
@@ -1056,15 +1105,16 @@ form textarea {
 }
 
 form input[type="submit"] {
-  background-color: #57C3E9;
+  background-color:greenyellow;
   border-radius: 20px;
   color: #fff;
   border: 0;
   font-size: 18px;
+  width: 50%;
 }
 
 form input[type="submit"]:hover {
-  background-color: #84d3ef;
+  background-color: greenyellow;
 }
 
 .container {
@@ -1113,7 +1163,7 @@ footer p {
 
 .search-form .search-input {
   width: 30%;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .search-form .search-btn {
