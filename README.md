@@ -14,7 +14,7 @@
 
 - has_many :tweets
 - has_many :comment
-- has_many :sns_credential
+- has_many :sns_credentials
 - has_many :favorites
 
 ## sns_credentialモデル
@@ -58,6 +58,7 @@
 
 ### Favorite テーブル
 | Column      | Type       | Option                         |
+|-------------|------------|--------------------------------|
 | user        | references | null: false, foreign_key: true |
 | tweet       | references | null: false, foreign_key: true |
 
