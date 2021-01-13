@@ -1,14 +1,60 @@
+<div class="top_page"><p><%= @nickname %>さんの投稿一覧</p></div>
+<div class="follow_count">
+<div class="follower">
+
+  フォロー数： <%= current_user.follower.count %></div>
+  <div class="follower_right">
+  フォロワー数：<%= current_user.followed.count %></div>
+</div>
+
+  
+<br><br>
+
+<table>
+<div class="aaa">
+  <div class="name_size"><span>ユーザー名</div></span>
+    <tbody>
+    
+        <% @following_users.each do |following_user| %>
+        <tr>
+            <td><%=following_user.nickname %>さん</td>
+            
+            <td><%= link_to 'フォロー外す', user_relationships_path(following_user.id), method: :delete ,class:"bton" %></td>
+        </tr>
+        
+        <% end %>
+    </tbody>
+</table>
+</div>
+<br><br>
+</div>
+
+<table>
+
+<div class="aaa">
+ <div class="name_size"><span>フォロワー名</div></span>
+    <tbody>
+        <% @follower_users.each do |follower_user| %>
+        
+            <td><%= follower_user.nickname %>さん</td>
+        
+        <% end %>
+    </tbody>
+  </table>
+  </div>
+</div>
+
 <div class="contents row">
 
-  <p><%= @nickname %>さんの投稿一覧</p>
-  <h1><%= link_to "投稿一覧へ戻る",tweets_path,method: :get%></h1>
+  
+  
+  <h1><%= link_to "投稿一覧へ戻る",tweets_path,method: :get,class:"page_back"%></h1>
   
   <% @tweets.each do |tweet| %>
     <div class="content_post" style="background-image: url(<%= tweet.image %>);">
       <p><%= tweet.text %></p>
       
-       </div>
+    </div>
        
   <% end %>
   
-</div>
