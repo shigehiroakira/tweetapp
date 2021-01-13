@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     registrations: "users/registrations"
   }
  root "comments#index"
- resources :users 
+ resources :users do
+  resource :relationships, only: [:create, :destroy]
+ end
  resources :tweets do
   collection do
     get 'search'

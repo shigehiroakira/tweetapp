@@ -280,6 +280,113 @@ figure {
  * ========================================================================== */
 /*
  * Define consistent border, margin, and padding. */
+ .top_page{
+   font-size: 40px;
+ }
+ .follow_count{
+   display: flex;
+   justify-content: space-around;
+   background-color:cornsilk;
+   font-size: 30px;
+   
+ }
+.bton{
+  font-size:15px;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 70vh;
+  border: 3px solid black;
+}
+
+.name_size{
+  
+  font-size: 18px;
+  color: #505050;/*文字色*/
+  padding: 0.5em;/*文字周りの余白*/
+  display: inline-block;/*おまじない*/
+  line-height: 1.3;/*行高*/
+  background: #dbebf8;/*背景色*/
+  vertical-align: middle;
+  border-radius: 25px 0px 0px 25px;
+  
+}
+.aaa{
+  display: flex;
+  display: inline-block;
+}
+.name_size:before {
+  content: '●';
+  color: white;
+  margin-right: 8px;
+}
+td{
+  font-size: 20px;
+}
+.name_size span {
+  position: relative;
+  padding: 0 1em;
+  background: #fff;
+}
+ .follower{
+   color: red;
+   
+   
+ }
+ .follower_right{
+   color: blue;
+ }
+
+
+ 
+
+ .follow{
+   
+  font-size:20px;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem 1rem 4rem;
+  color: #fff;
+  border-radius: 100vh 0 0 100vh;
+  background: #fa4141;
+  
+}
+
+.follow:before {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+}
+ .followers{
+   font-size:20px;
+   
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem 1rem 4rem;
+  color: #fff;
+  border-radius: 100vh 0 0 100vh;
+  background: blue;
+  
+}
+
+.followers:before {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+}
+ .page_back{
+  
+   font-size: 20px;
+ }
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
