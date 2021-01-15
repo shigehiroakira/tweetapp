@@ -8,6 +8,12 @@
           <li>
             <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
           </li>
+          <% else %>
+          <li>
+            <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
+          </li>
+          
+           
            <% end %>
         </ul>
       </div>
